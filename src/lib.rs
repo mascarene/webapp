@@ -1,14 +1,16 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
+// The bindgen crate export a macro for handling the action of exporting a function to JS.
+// The actual macro is defined at the eol.  
+use wasm_bindgen::prelude::wasm_bindgen;
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+// The websystem crate defines several logging functions.
+// The number in log_* refers to how many values can be logged.
+use web_sys::console::log_1 as log;
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+#[wasm_bindgen]
+
+pub fn grayscale(encoded_file: &str) {
+    // Borrowing the str because we are not going to update the string directly.
+
+    log(&encoded_file.into()); // Type conversion str to JS.
+
 }

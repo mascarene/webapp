@@ -18,8 +18,7 @@ async function init() {
             // Search for the metadata prefix and replace it with an empty string
             /^data:image\/(png|jpeg|jpg);base64,/, ''
         )
-        console.log(input.files[0])
-        console.log(base64)
+        rustApp.grayscale(base64)
     }
 
     input.addEventListener('change', () => {

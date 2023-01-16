@@ -9,4 +9,8 @@ crate-type = ["cdylib"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-wasm-bindgen = "0.2.83"
+wasm-bindgen = "0.2.83" # Export Rust functions into JS (but does not define function themselves).
+
+[dependencies.web-sys] # Export a set if JS functions to Rust.
+version = "0.3.4"
+features = ["console"] # Export JS console function to our Rust project
