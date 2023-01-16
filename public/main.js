@@ -1,6 +1,6 @@
 function init() {
     const input = document.getElementById('upload')
-    const fileReader = new fileReader()
+    const fileReader = new FileReader()
 
     fileReader.onloadend = () => {
         let base64 = fileReader.result
