@@ -10,6 +10,7 @@ crate-type = ["cdylib"]
 
 [dependencies]
 wasm-bindgen = "0.2.83" # Export Rust functions into JS (but does not define function themselves).
+base64 = "0.13.0"
 
 [dependencies.web-sys] # Export a set if JS functions to Rust.
 version = "0.3.4"
